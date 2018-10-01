@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">她的问答</string>
+
+    <string name="str_reset_password">重置密码</string>
+    <string name="str_register">注册</string>
+
+    <!--登录注册界面-->
+    <string name="str_login_register_phone_login">手机登录</string>
+    <string name="str_login_register_register">注册</string>
+    <string name="str_input_username">请输入手机号</string>
+    <string name="str_input_password">请输入密码</string>
+    <string name="str_phone_num_cannot_empty">手机号不能为空</string>
+    <string name="str_username_cannot_empty">用户名不能为空</string>
+    <string name="str_verify_code_cannot_empty">验证码不能为空</string>
+    <string name="str_password_cannot_empty">密码不能为空</string>
+    <string name="str_phone_num_isused">手机号码已经被注册</string>
+    <string name="str_verify_code_send_success">验证码发送成功</string>
+    <string name="str_verify_is_wrong">验证码错误,请重新填写</string>
+    <string name="str_phone_num_isnot_exist">手机号不存在</string>
+
+    <!--登录界面-->
+    <string name="str_login_user_login">用户登录</string>
+    <string name="str_login">登录</string>
+    <string name="str_login_forget_password">忘记密码？</string>
+
+    <!--注册界面-->
+    <string name="str_register_input_confirm_password">请输入确认密码</string>
+    <string name="str_register_get_identify_code">获取验证码</string>
+    <string name="str_register_identify_code">验证码</string>
+    <string name="str_register_input_username">请输入用户名</string>
+
+    <string name="str_confirm">确认</string>
+
+    <string name="str_tab_task">悦读站</string>
+    <string name="str_tab_rank">社区</string>
+    <string name="str_tab_me">我的</string>
+    <string name="str_about_info">关于我们</string>
+    <string name="str_login_out">退出登录</string>
+
+</resources>
