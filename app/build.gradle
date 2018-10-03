@@ -49,8 +49,9 @@ dependencies {
     compile 'me.iwf.photopicker:PhotoPicker:0.9.12@aar'
     compile 'id.zelory:compressor:2.1.0'
     compile files('libs/volley.jar')
+    compile project(path: ':library')
 }
-//
+
 repositories {
     maven { url 'https://github.com/MarsVard/IonIconView/raw/master/maven'}
 //    maven { url 'https://jitpack.io' }

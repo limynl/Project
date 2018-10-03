@@ -30,6 +30,7 @@
     <string name="str_register_input_username">请输入用户名</string>
 
     <string name="str_confirm">确认</string>
+    <string name="zero_num">0</string>
 
     <string name="str_tab_task">悦读站</string>
     <string name="str_tab_rank">社区</string>

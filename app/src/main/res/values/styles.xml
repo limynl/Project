@@ -46,4 +46,25 @@
         <item name="android:button">@drawable/check_box_bg</item>
     </style>
 
+    <!--图片查看界面-->
+    <style name="actionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="actionBarSize">@dimen/spacing_48</item>
+    </style>
+
+    <style name="customTheme.PhotoPicker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionBarTheme">@style/actionBarTheme</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorTheme2</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="actionBarSize">@dimen/spacing_48</item>
+    </style>
+
+    <style name="customTheme.PhotoPreview" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionBarTheme">@style/actionBarTheme</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorTheme2</item>
+        <item name="actionBarSize">@dimen/spacing_48</item>
+    </style>
+
 </resources>

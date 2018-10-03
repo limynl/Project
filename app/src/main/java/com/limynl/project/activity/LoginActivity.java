@@ -27,6 +27,7 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
     Button mLoginBtn;
     @BindView(R.id.id_login_forget_password)
     TextView mLoginForgetPassword;
+
     private LoginPresenter mLoginPresenter;
 
     @Override

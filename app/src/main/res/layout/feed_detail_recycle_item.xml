@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feed_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <!--动态基本信息-->
+    <include layout="@layout/feed_info_include"/>
+
+    <!--图片列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/spacing_16"
+        android:paddingRight="@dimen/spacing_16"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <!--浏览数、评论数、赞数-->
+    <include layout="@layout/feed_action_include"/>
+
+    <!--赞详细列表-->
+    <include layout="@layout/feed_like_include"/>
+
+</LinearLayout>

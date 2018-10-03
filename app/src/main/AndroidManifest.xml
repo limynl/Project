@@ -87,6 +87,16 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme.PhotoPreview"/>
+
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme.PhotoPicker"/>
+
     </application>
 
 </manifest>

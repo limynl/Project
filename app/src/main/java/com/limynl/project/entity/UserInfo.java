@@ -1,7 +1,6 @@
 package com.limynl.project.entity;
 
 /**
- * Created by Lmy on 2017/10/31.
  * email 1434117404@qq.com
  */
 

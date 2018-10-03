@@ -14,4 +14,6 @@
     <color name="colorYellow">#F4EA2A</color>
     <color name="color_f6">#f6f6f6</color>
     <color name="bgColor_overlay_black">#666666</color>
+
+    <color name="blue">#25c6fc</color>
 </resources>

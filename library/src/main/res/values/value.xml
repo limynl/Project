@@ -1,0 +1,52 @@
+<resources>
+    <string name="lib_name">library</string>
+    <string name="lib_dialog_loading">请稍等&#8230;</string>
+    <string name="lib_load_more">正在加载&#8230;</string>
+    <string name="lib_load_pull_to">上拉加载</string>
+    <string name="lib_load_none">没有更多</string>
+    <string name="lib_load_end">加载完成</string>
+
+
+    <style name="Lib" >
+
+    </style>
+
+    <style name="Lib.AppTextAppearance" >
+
+    </style>
+
+    <style name="Lib.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- china color -->
+    <color name="mudanfenhong">#eea2a4</color>
+    <color name="xiangyehong">#f07c82</color>
+    <color name="yanhong">#ed5a65</color>
+    <color name="yuhong">#c04851</color>
+    <color name="anyuzi">#5c2223</color>
+    <color name="lizi">#5a191b</color>
+    <color name="putaojiangzi">#5a1216</color>
+    <color name="kongquelan">#13afc8</color>
+    <color name="gulan">#0c90bb</color>
+    <color name="huaqing">#2376b7</color>
+
+
+
+</resources>
