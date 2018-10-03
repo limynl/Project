@@ -1,5 +1,6 @@
 package com.limynl.project.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.limynl.project.R;
 import com.limynl.project.base.TopBarBaseActivity;
+import com.limynl.project.constants.Constants;
 import com.limynl.project.db.UserDbHelper;
 import com.limynl.project.fragment.MeFragment;
 import com.limynl.project.fragment.OtherFragment;
@@ -201,6 +203,25 @@ public class MainActivity extends TopBarBaseActivity implements View.OnClickList
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         return false;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (resultCode) {
+            case Constants.ACTIVITY_PUBLISH:
+                int id = data.getIntExtra(Constants.GO_INDEX, R.id.id_tab_rank);
+                // 非导航本身事件，手动切换
+                setTitle(getString(R.string.str_tab_rank));
+                isShowToolBar(true);
+                viewPager.setCurrentItem(1);
+                break;
+            case Constants.ACTIVITY_PERSONAL:
+//                mMineFragment.onActivityResult(requestCode, resultCode, data);
+                break;
+            default:
+                break;
+        }
     }
 
     @Override

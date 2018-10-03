@@ -1,6 +1,7 @@
 package com.limynl.project.base;
 
 import android.os.Bundle;
+import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
@@ -16,6 +17,7 @@ import com.limynl.project.utils.ActivityCollector;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import me.cl.library.view.LoadingDialog;
 
 /**
  * email 1434117404@qq.com
@@ -34,6 +36,36 @@ public abstract class TopBarBaseActivity extends AppCompatActivity {
     public interface OnClickListener {
         void onClick();
     }
+
+    //加载动画
+    private LoadingDialog mLoading;
+
+    public void setLoading(){
+        setLoading(getString(R.string.lib_dialog_loading));
+    }
+
+    public void setLoading(@StringRes int msgId){
+        setLoading(getString(msgId));
+    }
+
+    public void setLoading(CharSequence msg){
+        mLoading = new LoadingDialog(this, msg);
+    }
+
+    public void showLoading() {
+        if (mLoading == null) return;
+        if (mLoading.isShowing()) return;
+        mLoading.show();
+    }
+
+    public void dismissLoading() {
+        if (mLoading == null) return;
+        if (mLoading.isShowing()) mLoading.dismiss();
+    }
+    //end
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -97,6 +97,9 @@
             android:screenOrientation="portrait"
             android:theme="@style/customTheme.PhotoPicker"/>
 
+        <activity android:name=".activity.SendSocialMessageActivity"/>
+        <activity android:name=".activity.SocialMessageDetailActivity"/>
+
     </application>
 
 </manifest>

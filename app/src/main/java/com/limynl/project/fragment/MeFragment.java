@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.limynl.project.R;
 import com.limynl.project.base.LazyLoadFragment;
 import com.limynl.project.db.UserDbHelper;
+import com.limynl.project.utils.Utils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,7 +66,10 @@ public class MeFragment extends LazyLoadFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.id_about_info: {//关于我们
-                Toast.makeText(mContext, "关于我们", Toast.LENGTH_SHORT).show();
+                boolean isWpa = Utils.wpaQQ(getActivity(), "1434117404");
+                if (!isWpa) {
+                    Toast.makeText(mContext, "未安装手Q或安装的版本不支持", Toast.LENGTH_SHORT).show();
+                }
             }
             break;
             case R.id.id_login_out: {//退出登录

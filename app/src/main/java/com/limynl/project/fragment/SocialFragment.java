@@ -1,6 +1,7 @@
 package com.limynl.project.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.limynl.project.R;
+import com.limynl.project.activity.SendSocialMessageActivity;
+import com.limynl.project.activity.SocialMessageDetailActivity;
 import com.limynl.project.adapter.SocialMessageAdapter;
 import com.limynl.project.base.LazyLoadFragment;
 import com.limynl.project.constants.Constants;
@@ -108,7 +111,7 @@ public class SocialFragment extends LazyLoadFragment {
         mRecyclerView.setAdapter(mAdapter);
 
         initEvent();
-
+        getMoodList(mPage, mCount);
     }
 
     private void initEvent() {
@@ -195,14 +198,13 @@ public class SocialFragment extends LazyLoadFragment {
         getMoodList(mPage, mCount);
     }
 
-    // 前往动态发布
-    private void gotoPublish() {
-        Toast.makeText(mContext, "发布动态", Toast.LENGTH_SHORT).show();
-    }
-
     // 前往动态详情
     private void gotoMood(Feed feed) {
-        Toast.makeText(mContext, "动态详情", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), SocialMessageDetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("feed", feed);
+        intent.putExtras(bundle);
+        startActivityForResult(intent, Constants.ACTIVITY_MOOD);
     }
 
     // 点赞
@@ -270,7 +272,8 @@ public class SocialFragment extends LazyLoadFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.send_social:{
-                Toast.makeText(mContext, "发布动态", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(), SendSocialMessageActivity.class);
+                startActivityForResult(intent, Constants.ACTIVITY_PUBLISH);
             }break;
         }
     }
