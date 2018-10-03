@@ -218,7 +218,7 @@ public class SocialFragment extends LazyLoadFragment {
 //        String uid = SPUtil.build().getString(Constants.USER_ID);
         OkUtil.post()
                 .url(Constants.API_URL)
-                .addParam("userId", 1)
+                .addParam("userId", "861a9ef624554be6bcb87aad76b7ab2d")
                 .addParam("pageNum", pageNum)
                 .addParam("pageSize", pageSize)
                 .execute(new ResultCallback<Result<PageInfo<Feed>>>() {

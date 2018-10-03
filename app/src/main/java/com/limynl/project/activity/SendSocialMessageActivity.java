@@ -168,7 +168,7 @@ public class SendSocialMessageActivity extends TopBarBaseActivity {
         removePhotoAdd(uploadImg);
         OkUtil.post()
                 .url(Constants.saveFeed)
-                .addParam("userId", 1)
+                .addParam("userId", "861a9ef624554be6bcb87aad76b7ab2d")
                 .addParam("feedInfo", mInfo)
                 .addUrlParams("photoList", uploadImg)
                 .execute(new ResultCallback<Result<Feed>>() {
