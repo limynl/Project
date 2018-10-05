@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.limynl.project.R;
 import com.limynl.project.base.TopBarBaseActivity;
 import com.limynl.project.db.UserDbHelper;
+import com.limynl.project.entity.UserInfo;
 import com.limynl.project.presenter.LoginPresenter;
 import com.limynl.project.view.ILoginView;
 
@@ -59,7 +60,7 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
         mLoginPresenter = new LoginPresenter(this, this);
         UserDbHelper.setInstance(this);
         Intent intent = null;
-        if(!UserDbHelper.getInstance().getLoginState()){//当前用户已登录
+        if(UserDbHelper.getInstance().getLoginState()){//当前用户已登录
             intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -68,7 +69,11 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
 
     @Override
     public void loginSuccess(String msg) {
-        UserDbHelper.getInstance().saveLoginState(false);
+        UserDbHelper.getInstance().saveLoginState(true);
+        UserInfo userInfo = new UserInfo();
+        userInfo.setSex(1);
+        UserDbHelper.getInstance().saveUserLoginInfo(userInfo);
+
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);

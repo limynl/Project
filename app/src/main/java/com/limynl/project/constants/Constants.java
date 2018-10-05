@@ -9,9 +9,11 @@ public class Constants {
     public static final String INTERFACE_URL = "http://120.78.149.138/xcv/index.php/home/index/index";
     public static final String GETVIDEOS_URL = "http://120.78.149.138:8080/getVideos/";
 
-    public static final String BASE_URL = "http://47.100.245.128/lingxi-test";
+//    public static final String BASE_URL = "http://47.100.245.128/lingxi-test";
+    public static final String BASE_URL = "http://139.199.23.142:8090/project";//192.168.43.210
 
-    public static final String IMG_URL = "http://47.100.245.128/rss/lingxi-test";
+//    public static final String IMG_URL = "http://47.100.245.128/rss/lingxi-test";
+    public static final String IMG_URL = "http://139.199.23.142:8080/social_app";
 
     /**
      * 获取用户帖子

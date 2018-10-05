@@ -84,7 +84,7 @@ public class MeFragment extends LazyLoadFragment {
                 out.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        UserDbHelper.getInstance().saveLoginState(true);
+                        UserDbHelper.getInstance().saveLoginState(false);
                         getActivity().finish();
                         getActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         dialogOne.dismiss();

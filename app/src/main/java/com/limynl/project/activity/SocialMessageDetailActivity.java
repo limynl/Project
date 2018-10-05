@@ -120,6 +120,8 @@ public class SocialMessageDetailActivity extends TopBarBaseActivity {
             }
         });
 
+        saveId = "6c0f824f03594fac9f4a156b3baf99b6";
+
         // 输入状态模式默认为评论
         MSG_MODE = MSG_EVALUATE;
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);

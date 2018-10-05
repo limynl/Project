@@ -26,8 +26,10 @@ public class UserDbHelper {
      * 保存用户的信息到当前的数据库
      */
     public void saveUserLoginInfo(UserInfo userInfo){
+        saveStringConfig("username", userInfo.getUsername());
         saveStringConfig("phoneNum", userInfo.getPhone());
-        saveIntegerConfig("userId", userInfo.getUserId());
+        saveIntegerConfig("userId", userInfo.getId()==null ?0:Integer.parseInt(userInfo.getId()));
+        saveIntegerConfig("sex", userInfo.getSex());//0女 1男 -1未知
     }
 
     /**
@@ -36,8 +38,14 @@ public class UserDbHelper {
     public UserInfo getUserInfo(){
         UserInfo userInfo = new UserInfo();
         userInfo.setPhone(getStringConfig("phoneNum"));
-        userInfo.setUserId(getInegerConfig("userId"));
+        userInfo.setId(getInegerConfig("userId")+"");
+        userInfo.setUsername(getStringConfig("username"));
+        userInfo.setSex(getInegerConfig("sex"));
         return userInfo;
+    }
+
+    public void clearUserInfo(){
+
     }
 
     /**

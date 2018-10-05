@@ -111,11 +111,11 @@ public class SendSocialMessageActivity extends TopBarBaseActivity {
             return;
         }
         if (mPhotos.size() <= 1) {
-//            postSaveFeed(mPhotos);
+            postSaveFeed(mPhotos);
             Toast.makeText(SendSocialMessageActivity.this, "发布成功", Toast.LENGTH_SHORT).show();
             onBackPressed();
         } else {
-//            postUpload(mPhotos);
+            postUpload(mPhotos);
             Toast.makeText(SendSocialMessageActivity.this, "发布成功", Toast.LENGTH_SHORT).show();
             onBackPressed();
         }
@@ -168,7 +168,7 @@ public class SendSocialMessageActivity extends TopBarBaseActivity {
         removePhotoAdd(uploadImg);
         OkUtil.post()
                 .url(Constants.saveFeed)
-                .addParam("userId", "861a9ef624554be6bcb87aad76b7ab2d")
+                .addParam("userId", "6c0f824f03594fac9f4a156b3baf99b6")
                 .addParam("feedInfo", mInfo)
                 .addUrlParams("photoList", uploadImg)
                 .execute(new ResultCallback<Result<Feed>>() {

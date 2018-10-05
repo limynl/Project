@@ -6,32 +6,6 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:id="@+id/id_tab_task"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <be.webelite.ion.IconView
-            android:id="@+id/id_tab_task_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ioniconview:name="ion_social_dropbox"
-            android:textSize="25dp"
-            android:textColor="@color/colorTextHint"/>
-
-        <TextView
-            android:id="@+id/id_tab_task_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/tab_text_size"
-            android:textColor="@color/colorTextHint"
-            android:text="@string/str_tab_task"/>
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/id_tab_rank"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -54,6 +28,32 @@
             android:textSize="@dimen/tab_text_size"
             android:textColor="@color/colorTextHint"
             android:text="@string/str_tab_rank"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_tab_task"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <be.webelite.ion.IconView
+            android:id="@+id/id_tab_task_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ioniconview:name="ion_social_dropbox"
+            android:textSize="25dp"
+            android:textColor="@color/colorTextHint"/>
+
+        <TextView
+            android:id="@+id/id_tab_task_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tab_text_size"
+            android:textColor="@color/colorTextHint"
+            android:text="@string/str_tab_task"/>
 
     </LinearLayout>
 
