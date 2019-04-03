@@ -3,7 +3,7 @@ package com.limynl.project.db;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.limynl.project.entity.UserInfo;
+import com.limynl.project.entity.healthy.HealthyUserInfo;
 
 
 public class UserDbHelper {
@@ -25,22 +25,24 @@ public class UserDbHelper {
     /**
      * 保存用户的信息到当前的数据库
      */
-    public void saveUserLoginInfo(UserInfo userInfo){
+    public void saveUserLoginInfo(HealthyUserInfo userInfo){
+        saveIntegerConfig("userId", userInfo.getId());
         saveStringConfig("username", userInfo.getUsername());
-        saveStringConfig("phoneNum", userInfo.getPhone());
-        saveIntegerConfig("userId", userInfo.getId()==null ?0:Integer.parseInt(userInfo.getId()));
-        saveIntegerConfig("sex", userInfo.getSex());//0女 1男 -1未知
+        saveStringConfig("phone", userInfo.getPhone());
+        saveStringConfig("avater", userInfo.getAvater());
+        saveStringConfig("gender", userInfo.getGender());
     }
 
     /**
      * 得到用户信息
      */
-    public UserInfo getUserInfo(){
-        UserInfo userInfo = new UserInfo();
-        userInfo.setPhone(getStringConfig("phoneNum"));
-        userInfo.setId(getInegerConfig("userId")+"");
+    public HealthyUserInfo getUserInfo(){
+        HealthyUserInfo userInfo = new HealthyUserInfo();
+        userInfo.setPhone(getStringConfig("phone"));
+        userInfo.setId(getInegerConfig("userId"));
         userInfo.setUsername(getStringConfig("username"));
-        userInfo.setSex(getInegerConfig("sex"));
+        userInfo.setGender(getStringConfig("gender"));
+        userInfo.setAvater(getStringConfig("avater"));
         return userInfo;
     }
 

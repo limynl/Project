@@ -16,10 +16,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-/**
- * Created by Lmy on 2017/10/31.
- * email 1434117404@qq.com
- */
 
 public class OtherFragment extends LazyLoadFragment {
     @BindView(R.id.timeline_tablayout)

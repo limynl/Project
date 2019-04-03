@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                app:contentPadding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="身高"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/height"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="体重"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/weight"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="视力"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/version1"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="左眼视力"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/version2"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/version1"
+                            android:background="@drawable/btn_login2"
+                            android:hint="右眼视力"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="血压"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/pressure1"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="左侧血压"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:id="@+id/pressure2"
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/pressure1"
+                            android:background="@drawable/btn_login2"
+                            android:hint="右侧血压"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="心率"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/heartbeat"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="色盲"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/blindness"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="肝功能"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/liver_function"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="肺活量"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/vital_capacity"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="口腔"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/oral_cavity"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="体脂率"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/body_percentage"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="体脂肪"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/body_fat"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="结论"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/conclusion"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="备注"
+                            android:textColor="#424242"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/remarks"
+                            android:layout_width="190dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login2"
+                            android:hint="请填写"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="#A3A3A3"
+                            android:textColorHint="#A3A3A3"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#e0e0e0" />
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/id_update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_state_2_selector"
+            android:text="添加"
+            android:textSize="@dimen/button_text_size"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</ScrollView>

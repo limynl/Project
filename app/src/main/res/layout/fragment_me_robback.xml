@@ -1,0 +1,142 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg">
+
+    <LinearLayout
+        xmlns:ioniconview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/id_me_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTheme2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/id_user_avatar"
+                android:layout_marginTop="5dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_logo"
+                app:civ_border_color="@color/colorBg"
+                app:civ_border_width="1dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTheme2"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/id_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_user_avatar"
+                android:text="Limynl"
+                android:textColor="@color/colorTheme"
+                android:textSize="18sp"/>
+
+            <be.webelite.ion.IconView
+                android:id="@+id/id_user_sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorTheme"
+                android:textSize="20dp"
+                ioniconview:name="ion_male"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_about_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/text_item_bg_selector"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="12.5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="12.5dp">
+
+            <be.webelite.ion.IconView
+                android:id="@+id/id_user_info_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp"
+                ioniconview:name="ion_social_rss_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/id_user_info_img"
+                android:text="@string/str_about_info"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_left_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_login_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/text_item_bg_selector"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="12.5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="12.5dp">
+
+            <be.webelite.ion.IconView
+                android:id="@+id/id_user_login_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp"
+                ioniconview:name="ion_social_dropbox_outline"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/id_user_login_out"
+                android:text="@string/str_login_out"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_left_arrow"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

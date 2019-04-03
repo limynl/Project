@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#f3f3f3"
+    android:fitsSystemWindows="true">
+
+    <EditText
+        android:id="@+id/feed_back_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:color/transparent"
+        android:gravity="top"
+        android:hint="请填写你的反馈内容..."
+        android:maxHeight="200dp"
+        android:maxLines="10"
+        android:padding="5dp"
+        android:textColor="#000000"
+        android:textColorHint="#999999"
+        android:textSize="16sp" />
+
+    <com.limynl.project.utils.textview.WavyLineView
+        android:id="@+id/release_wavyLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:amplitude="8dp"
+        app:strokeColor="@color/colorTheme"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/id_feed_back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_state_2_selector"
+        android:text="提交"
+        android:textSize="@dimen/button_text_size"
+        android:textAlignment="center" />
+
+</LinearLayout>

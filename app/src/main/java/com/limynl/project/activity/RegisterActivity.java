@@ -5,6 +5,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,8 @@ public class RegisterActivity extends TopBarBaseActivity implements IRegisterVie
     EditText mUsername;
     @BindView(R.id.id_register_phone_number)
     EditText mPhoneNumber;
+    @BindView(R.id.user_sex)
+    RadioGroup mGender;
     @BindView(R.id.id_register_identify_code)
     EditText mIdentifyCode;
     @BindView(R.id.id_register_get_identify_code)
@@ -32,6 +35,8 @@ public class RegisterActivity extends TopBarBaseActivity implements IRegisterVie
     EditText mInputPasswordEdit;
     @BindView(R.id.id_register_btn)
     Button mRegisterBtn;
+
+    private static String gender = "男";
 
     //验证码倒计时
     CountDownTimer timer = new CountDownTimer(60000, 1000) {
@@ -67,6 +72,16 @@ public class RegisterActivity extends TopBarBaseActivity implements IRegisterVie
                 finish();
             }
         });
+        mGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(radioGroup.getCheckedRadioButtonId() == R.id.sex_male){
+                    gender = "男";
+                }else{
+                    gender = "女";
+                }
+            }
+        });
         mRegisterPresenter = new RegisterPresenter(this, this);
     }
 
@@ -84,7 +99,7 @@ public class RegisterActivity extends TopBarBaseActivity implements IRegisterVie
                 mRegisterPresenter.getVerificationCode(mPhoneNumber.getText().toString(), mGetIdentifyCode, timer);
                 break;
             case R.id.id_register_btn:
-                mRegisterPresenter.register(mUsername.getText().toString(), mPhoneNumber.getText().toString(), mInputPasswordEdit.getText().toString(), mIdentifyCode.getText().toString(), timer);
+                mRegisterPresenter.register(mUsername.getText().toString(), mPhoneNumber.getText().toString(), mInputPasswordEdit.getText().toString(), mIdentifyCode.getText().toString(), gender, timer);
                 break;
         }
     }

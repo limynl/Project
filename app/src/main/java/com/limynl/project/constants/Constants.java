@@ -10,7 +10,8 @@ public class Constants {
     public static final String GETVIDEOS_URL = "http://120.78.149.138:8080/getVideos/";
 
 //    public static final String BASE_URL = "http://47.100.245.128/lingxi-test";
-    public static final String BASE_URL = "http://139.199.23.142:8090/project";//192.168.43.210
+//    public static final String BASE_URL = "http://139.199.23.142:8090/project";//192.168.43.210
+    public static final String BASE_URL = "http://39.105.184.94:8081/healthy";//192.168.88.129
 
 //    public static final String IMG_URL = "http://47.100.245.128/rss/lingxi-test";
     public static final String IMG_URL = "http://139.199.23.142:8080/social_app";
@@ -45,6 +46,25 @@ public class Constants {
      */
     public static String saveComment = BASE_URL + "/feed/comment/save";
 
+    /**
+     * 用户登录
+     */
+    public static final String userRegister = BASE_URL + "/register";
+    /**
+     * 用户重置密码
+     */
+    public static final String userResetPassword = BASE_URL + "/restPassword";
+    /**
+     * 用户登录
+     */
+    public static final String userLogin = BASE_URL + "/login";
+    /**
+     * 用户更新
+     */
+    public static final String userUpdate = BASE_URL + "/update";
+    public static final String userCheck = BASE_URL + "/queryCheck";
+    public static final String userDeleteCheck = BASE_URL + "/deleteCheck";
+    public static final String useraddCheck = BASE_URL + "/addCheck";
 
     public static boolean isRead = true;
 

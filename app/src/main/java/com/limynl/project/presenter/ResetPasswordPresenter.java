@@ -6,7 +6,13 @@ import android.text.TextUtils;
 import android.widget.TextView;
 
 import com.limynl.project.R;
+import com.limynl.project.constants.Constants;
+import com.limynl.project.entity.result.Result;
+import com.limynl.project.utils.okhttp.OkUtil;
+import com.limynl.project.utils.okhttp.ResultCallback;
 import com.limynl.project.view.IResetPasswordView;
+
+import okhttp3.Call;
 
 
 public class ResetPasswordPresenter implements IResetPasswordPresenter{
@@ -50,20 +56,39 @@ public class ResetPasswordPresenter implements IResetPasswordPresenter{
             return;
         }
 
-        if (TextUtils.isEmpty(code)){
-            iResetPasswordView.validateError(mContext.getString(R.string.str_verify_code_cannot_empty));
-            return;
-        }
-
         if (TextUtils.isEmpty(password)){
             iResetPasswordView.validateError(mContext.getString(R.string.str_password_cannot_empty));
             return;
         }
 
-        //发送请求进行重置密码
-        //首先检查验证码是否正确
-        iResetPasswordView.validateError("重置成功");
+        resetUserPassword(phoneNum, password);
+    }
 
+    private void resetUserPassword(String phoneNum, String password) {
+        OkUtil.post()
+                .url(Constants.userResetPassword)
+                .addParam("phone", phoneNum)
+                .addParam("password", password)
+                .execute(new ResultCallback<Result<Boolean>>() {
+                    @Override
+                    public void onSuccess(Result<Boolean> response) {
+                        if (response.getData()) {
+                            iResetPasswordView.resetSuccess("密码重置成功!");
+                            return;
+                        }
+                        iResetPasswordView.validateError("请检查输入的手机号");
+                    }
+
+                    @Override
+                    public void onError(Call call, Exception e) {
+                        iResetPasswordView.validateError("密码重置失败!");
+                    }
+
+                    @Override
+                    public void onFinish() {
+
+                    }
+                });
     }
 }
 

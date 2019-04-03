@@ -123,11 +123,6 @@ public class MainActivity extends TopBarBaseActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.id_tab_rank:
-                int sex = UserDbHelper.getInstance().getUserInfo().getSex();
-                if(sex == 1){//女生才能进入
-                    Toast.makeText(this, "女生才能进入喔~~~~", Toast.LENGTH_SHORT).show();
-                    break;
-                }
                 setTitle(getString(R.string.str_tab_rank));
                 isShowToolBar(true);
                 viewPager.setCurrentItem(1);

@@ -3,7 +3,6 @@ package com.limynl.project.fragment;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,27 +13,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.limynl.project.R;
-import com.limynl.project.activity.FeedBackActivity;
-import com.limynl.project.activity.UpdateActivity;
 import com.limynl.project.base.LazyLoadFragment;
 import com.limynl.project.db.UserDbHelper;
 import com.limynl.project.utils.Utils;
 
-import be.webelite.ion.IconView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class MeFragment extends LazyLoadFragment {
+public class MeFragmentRollback extends LazyLoadFragment {
     @BindView(R.id.id_username)
     TextView userName;
-    @BindView(R.id.id_user_sex_male)
-    IconView userGenderMale;
-    @BindView(R.id.id_user_sex_female)
-    IconView userGenderFemale;
-    @BindView(R.id.setting_retreat)
-    Button retreat;
     private Unbinder unbinder;
     private Context mContext;
 
@@ -62,43 +52,27 @@ public class MeFragment extends LazyLoadFragment {
 
     @Override
     protected int setContentView() {
-        return R.layout.activity_setting;
+        return R.layout.fragment_me_robback;
     }
 
     @Override
     protected void lazyLoad() {
         mContext = getActivity();
         UserDbHelper.setInstance(mContext);
-        setUserInfo();
+//        userName.setText(UserDbHelper.getInstance().getUserInfo().getPhone());
     }
 
-    @OnClick({R.id.id_avatar, R.id.setting_retreat, R.id.link_me, R.id.check_update, R.id.feed_back})
+    @OnClick({R.id.id_about_info, R.id.id_login_out})
     public void onClick(View view) {
         switch (view.getId()) {
-            // 修改个人信息
-            case R.id.id_avatar: {
-                Intent intent = new Intent(getContext(),UpdateActivity.class);
-                startActivityForResult(intent, 2001);
-            }
-            break;
-            case R.id.link_me: {
+            case R.id.id_about_info: {//关于我们
                 boolean isWpa = Utils.wpaQQ(getActivity(), "1434117404");
                 if (!isWpa) {
                     Toast.makeText(mContext, "未安装手Q或安装的版本不支持", Toast.LENGTH_SHORT).show();
                 }
             }
             break;
-            case R.id.check_update: {
-                Toast.makeText(mContext, "当前已是最新版本!", Toast.LENGTH_SHORT).show();
-            }
-            break;
-            case R.id.feed_back: {
-                Intent intent = new Intent(mContext,FeedBackActivity.class);
-                startActivity(intent);
-            }
-            break;
-            // 退出登录
-            case R.id.setting_retreat: {
+            case R.id.id_login_out: {//退出登录
                 customDialog = LayoutInflater.from(getContext()).inflate(R.layout.dialog_out, null);
                 out = (Button) customDialog.findViewById(R.id.app_out);
                 cancel = (Button) customDialog.findViewById(R.id.app_cancel);
@@ -124,26 +98,6 @@ public class MeFragment extends LazyLoadFragment {
                 });
             }
             break;
-        }
-    }
-
-    private void setUserInfo(){
-        userName.setText(UserDbHelper.getInstance().getUserInfo().getUsername());
-        String gender = UserDbHelper.getInstance().getUserInfo().getGender();
-        if("男".equals(gender)){
-            userGenderMale.setVisibility(View.VISIBLE);
-            userGenderFemale.setVisibility(View.GONE);
-        }else{
-            userGenderFemale.setVisibility(View.VISIBLE);
-            userGenderMale.setVisibility(View.GONE);
-        }
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode==2001){
-            setUserInfo();
         }
     }
 }

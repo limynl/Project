@@ -99,6 +99,10 @@
 
         <activity android:name=".activity.SendSocialMessageActivity"/>
         <activity android:name=".activity.SocialMessageDetailActivity"/>
+        <activity android:name=".activity.UpdateActivity"/>
+        <activity android:name=".activity.FeedBackActivity"/>
+        <activity android:name=".activity.AddCheckActivity"/>
+        <activity android:name=".activity.DetailCheckActivity"/>
 
     </application>
 
