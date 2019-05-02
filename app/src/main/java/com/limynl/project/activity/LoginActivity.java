@@ -71,6 +71,7 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
     public void loginSuccess(String msg) {
         UserDbHelper.getInstance().saveLoginState(true);
         UserInfo userInfo = new UserInfo();
+//        userInfo.setId("6c0f824f03594fac9f4a156b3baf99b6");
         userInfo.setSex(1);
         UserDbHelper.getInstance().saveUserLoginInfo(userInfo);
 

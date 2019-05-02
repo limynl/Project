@@ -10,10 +10,12 @@ public class Constants {
     public static final String GETVIDEOS_URL = "http://120.78.149.138:8080/getVideos/";
 
 //    public static final String BASE_URL = "http://47.100.245.128/lingxi-test";
-    public static final String BASE_URL = "http://192.168.43.210:8090/project";//192.168.43.210
+//    public static final String BASE_URL = "http://192.168.88.129:8090/project";//192.168.43.210
+    public static final String BASE_URL = "http://39.105.184.94:8090/project";//192.168.43.210
 
 //    public static final String IMG_URL = "http://47.100.245.128/rss/lingxi-test";
-    public static final String IMG_URL = "http://192.168.43.210:8090/social_app";
+//    public static final String IMG_URL = "http://192.168.88.129:8090/social_app";
+    public static final String IMG_URL = "http://39.105.184.94:8080/lingxi";
 
     /**
      * 获取用户帖子

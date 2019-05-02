@@ -179,10 +179,14 @@ public class SocialMessageDetailActivity extends TopBarBaseActivity {
         mFeedId = feed.getId();
 
         User user = feed.getUser();
+//        user.setId("6c0f824f03594fac9f4a156b3baf99b6");
+//        user.setAvatar("http://39.105.184.94:8080/gallery/avater.jpg");
         toUid = user.getId();
+//        toUid = "6c0f824f03594fac9f4a156b3baf99b6";
 
         // 动态详情
         ContentUtil.loadUserAvatar(mUserImg, user.getAvatar());
+//        ContentUtil.loadUserAvatar(mUserImg, "http://39.105.184.94:8080/gallery/avater.jpg");
         mUserName.setText(user.getUsername());
         mFeedTime.setText(feed.getCreateTime());
         mFeedInfo.setText(FeedContentUtil.getFeedText(feed.getFeedInfo(), mFeedInfo));
