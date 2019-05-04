@@ -11,40 +11,43 @@ public class Constants {
 
 //    public static final String BASE_URL = "http://47.100.245.128/lingxi-test";
 //    public static final String BASE_URL = "http://139.199.23.142:8090/project";//192.168.43.210
-    public static final String BASE_URL = "http://39.105.184.94:8081/healthy";//192.168.88.129
+    public static final String BASE_URL = "http://192.168.1.10:8081/healthy";//192.168.1.10
+
+    public static final String BASE_URL2 = "http://39.105.184.94:8090/project";//192.168.43.210
+//    public static final String BASE_URL2 = "http://39.105.184.94:8090";//192.168.43.210
 
 //    public static final String IMG_URL = "http://47.100.245.128/rss/lingxi-test";
-    public static final String IMG_URL = "http://139.199.23.142:8080/social_app";
+    public static final String IMG_URL = "http://39.105.184.94:8080/lingxi";
 
     /**
      * 获取用户帖子
      */
-    public static final String API_URL = BASE_URL + "/feed/page";
+    public static final String API_URL = BASE_URL2 + "/feed/page";
 
     /**
      * 上传图片
      */
-    public static String uploadFeedImage = BASE_URL + "/rss/upload/feed/image";
+    public static String uploadFeedImage = BASE_URL2 + "/rss/upload/feed/image";
 
     /**
      * 发布动态
      */
-    public static final String saveFeed = BASE_URL + "/feed/save";
+    public static final String saveFeed = BASE_URL2 + "/feed/save";
 
     /**
      * 查看动态
      */
-    public static String viewFeed = BASE_URL + "/feed/view";
+    public static String viewFeed = BASE_URL2 + "/feed/view";
 
     /**
      * 动态评论列表
      */
-    public static String pageComment = BASE_URL + "/feed/comment/page";
+    public static String pageComment = BASE_URL2 + "/feed/comment/page";
 
     /**
      * 新增动态评论
      */
-    public static String saveComment = BASE_URL + "/feed/comment/save";
+    public static String saveComment = BASE_URL2 + "/feed/comment/save";
 
     /**
      * 用户登录

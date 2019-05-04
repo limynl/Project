@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.limynl.project.R;
 import com.limynl.project.activity.FeedBackActivity;
+import com.limynl.project.activity.HealthyReportActivity;
 import com.limynl.project.activity.UpdateActivity;
 import com.limynl.project.base.LazyLoadFragment;
 import com.limynl.project.db.UserDbHelper;
@@ -72,9 +73,14 @@ public class MeFragment extends LazyLoadFragment {
         setUserInfo();
     }
 
-    @OnClick({R.id.id_avatar, R.id.setting_retreat, R.id.link_me, R.id.check_update, R.id.feed_back})
+    @OnClick({R.id.id_avatar, R.id.setting_retreat, R.id.link_me, R.id.check_update, R.id.feed_back, R.id.healthy_report})
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.healthy_report: {
+                Intent intent = new Intent(getContext(),HealthyReportActivity.class);
+                startActivity(intent);
+            }
+            break;
             // 修改个人信息
             case R.id.id_avatar: {
                 Intent intent = new Intent(getContext(),UpdateActivity.class);
@@ -82,7 +88,7 @@ public class MeFragment extends LazyLoadFragment {
             }
             break;
             case R.id.link_me: {
-                boolean isWpa = Utils.wpaQQ(getActivity(), "1434117404");
+                boolean isWpa = Utils.wpaQQ(getActivity(), "2256684232");
                 if (!isWpa) {
                     Toast.makeText(mContext, "未安装手Q或安装的版本不支持", Toast.LENGTH_SHORT).show();
                 }

@@ -42,12 +42,13 @@
     <string name="action_contact">联系</string>
     <string name="action_attention">关注</string>
 
-    <string name="str_tab_task">资讯</string>
+    <string name="str_tab_task">交流</string>
     <string name="str_tab_rank">体检表</string>
     <string name="str_tab_me">我的</string>
     <string name="str_about_info">关于我们</string>
     <string name="str_login_out">退出登录</string>
     <string name="str_con">身体水分率是身体水分占身体比重的比值，是反应人体水分相对含量的指标。\n身体水分不仅构成了身体的主要成分，而且还有许多生理功能，是机体物质代谢必不可少的载体；人体细胞必须从组织间液提取营养，而营养物质溶于水才能被充分吸收。</string>
+    <string name="all">目前身体各项指标比较达标，但也要多时常多多关注自己身体健康，多喝水，勤锻炼!</string>
 
 
 

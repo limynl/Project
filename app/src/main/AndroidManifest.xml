@@ -103,6 +103,7 @@
         <activity android:name=".activity.FeedBackActivity"/>
         <activity android:name=".activity.AddCheckActivity"/>
         <activity android:name=".activity.DetailCheckActivity"/>
+        <activity android:name=".activity.HealthyReportActivity"/>
 
     </application>
 
