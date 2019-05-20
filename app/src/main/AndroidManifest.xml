@@ -104,6 +104,10 @@
         <activity android:name=".activity.AddCheckActivity"/>
         <activity android:name=".activity.DetailCheckActivity"/>
         <activity android:name=".activity.HealthyReportActivity"/>
+        <activity android:name=".activity.NewsActivity"/>
+        <activity android:name=".activity.JwsActivity"/>
+        <activity android:name=".activity.NewsDetailActivity"/>
+        <activity android:name=".activity.AddJwsActivity"/>
 
     </application>
 

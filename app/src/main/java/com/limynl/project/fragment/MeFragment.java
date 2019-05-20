@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.limynl.project.R;
 import com.limynl.project.activity.FeedBackActivity;
 import com.limynl.project.activity.HealthyReportActivity;
+import com.limynl.project.activity.JwsActivity;
+import com.limynl.project.activity.NewsActivity;
 import com.limynl.project.activity.UpdateActivity;
 import com.limynl.project.base.LazyLoadFragment;
 import com.limynl.project.db.UserDbHelper;
@@ -73,7 +75,7 @@ public class MeFragment extends LazyLoadFragment {
         setUserInfo();
     }
 
-    @OnClick({R.id.id_avatar, R.id.setting_retreat, R.id.link_me, R.id.check_update, R.id.feed_back, R.id.healthy_report})
+    @OnClick({R.id.id_avatar, R.id.setting_retreat, R.id.link_me, R.id.check_update, R.id.feed_back, R.id.healthy_report, R.id.healthy_news, R.id.healthy_jws})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.healthy_report: {
@@ -128,6 +130,16 @@ public class MeFragment extends LazyLoadFragment {
                         dialogOne.dismiss();
                     }
                 });
+            }
+            break;
+            case R.id.healthy_news: {
+                Intent intent = new Intent(mContext,NewsActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case R.id.healthy_jws: {
+                Intent intent = new Intent(mContext,JwsActivity.class);
+                startActivity(intent);
             }
             break;
         }
