@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.limynl.project.R;
-import com.limynl.project.entity.TestContentNewsBean;
+import com.limynl.project.entity.healthy.CommonInfo;
 import com.limynl.project.utils.ContentUtil;
 
 import java.text.SimpleDateFormat;
@@ -23,10 +23,10 @@ import java.util.Locale;
 public class ContentNewsAdapter extends BaseAdapter {
     private static final String TAG = ContentNewsAdapter.class.getSimpleName();
     private Context context;
-    private List<TestContentNewsBean> contentList;
+    private List<CommonInfo> contentList;
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.CHINA);//获取系统时间
 
-    public ContentNewsAdapter(Context context, List<TestContentNewsBean> contentList){
+    public ContentNewsAdapter(Context context, List<CommonInfo> contentList){
         this.context = context;
         this.contentList = contentList;
     }
@@ -62,13 +62,13 @@ public class ContentNewsAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         //显示相应的数据
-        TestContentNewsBean newsBean = contentList.get(position);
-        ContentUtil.loadImage(viewHolder.imageView, newsBean.getImageUrl());
+        CommonInfo newsBean = contentList.get(position);
+        ContentUtil.loadImage(viewHolder.imageView, newsBean.getImgUrl());
         if(!TextUtils.isEmpty(newsBean.getTitle())){
             viewHolder.newTitle.setText(newsBean.getTitle());
         }
-        if(!TextUtils.isEmpty(newsBean.getSrc())){
-            viewHolder.newSrc.setText(newsBean.getSrc());
+        if(!TextUtils.isEmpty(newsBean.getBrief())){
+            viewHolder.newSrc.setText(newsBean.getBrief());
         }
 //        String[] times = new String[4];
 //        if(!TextUtils.isEmpty(newsBean.getTime())){

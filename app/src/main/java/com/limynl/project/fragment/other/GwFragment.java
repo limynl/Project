@@ -149,7 +149,7 @@ public class GwFragment extends LazyLoadFragment {
                 "  \"msg\": \"成功\"\n" +
                 "}";
         allDataList = getDataFromJson(result);
-        adapter = new ContentNewsAdapter(getContext(), allDataList);
+//        adapter = new ContentNewsAdapter(getContext(), allDataList);
         listView.setAdapter(adapter);
     }
 

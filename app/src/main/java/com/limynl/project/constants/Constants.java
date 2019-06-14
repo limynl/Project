@@ -11,7 +11,7 @@ public class Constants {
 
 //    public static final String BASE_URL = "http://47.100.245.128/lingxi-test";
 //    public static final String BASE_URL = "http://139.199.23.142:8090/project";//192.168.43.210
-    public static final String BASE_URL = "http://39.105.184.94:8081/healthy";//192.168.1.10
+    public static final String BASE_URL = "http://39.105.184.94:8081/healthy";//192.168.1.7
 
     public static final String BASE_URL2 = "http://39.105.184.94:8090/project";//192.168.43.210
 //    public static final String BASE_URL2 = "http://39.105.184.94:8090";//192.168.43.210
@@ -70,6 +70,7 @@ public class Constants {
     public static final String userDeleteCheck = BASE_URL + "/deleteCheck";
     public static final String useraddCheck = BASE_URL + "/addCheck";
     public static final String useraddJws = BASE_URL + "/addJws";
+    public static final String news = BASE_URL + "/news";
 
     public static boolean isRead = true;
 
