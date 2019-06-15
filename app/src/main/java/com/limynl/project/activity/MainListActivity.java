@@ -3,7 +3,6 @@ package com.limynl.project.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.limynl.project.R;
 import com.limynl.project.base.TopBarBaseActivity;
@@ -43,7 +42,9 @@ public class MainListActivity extends TopBarBaseActivity {
             }
             break;
             case R.id.id_baoming_info: {//在线报名
-                Toast.makeText(this, "报名成功", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, ShowMessageActivity.class);
+                startActivity(intent);
+                this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
             break;
         }

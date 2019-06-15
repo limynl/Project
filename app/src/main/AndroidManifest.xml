@@ -84,6 +84,7 @@
 
         <activity android:name=".activity.MainListActivity"/>
         <activity android:name="com.limynl.project.activity.PropagandaActivity"/>
+        <activity android:name="com.limynl.project.activity.ShowMessageActivity"/>
 
     </application>
 

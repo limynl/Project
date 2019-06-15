@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="在线报名"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="要学车的朋友们赶紧赶快来报名，现在优惠活动，报名，学时，保险。不论你考多少次考掉不用你，花上一分钱，由驾校帮你买单，不用担心。学车快，学车。选择，龙广四通驾校，你就选对了，一所好的驾校。"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="套餐类型"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="惊喜，惊喜，九月份四通驾校报名开始了，想学车的朋友们，学友们，老师们，同学们赶紧赶快来龙广四通报名学车，有C1，C2，报名有惊喜，前五十名享受VlP学员待遇"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
