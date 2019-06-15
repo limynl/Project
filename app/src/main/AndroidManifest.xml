@@ -82,23 +82,8 @@
 
         <activity android:name=".activity.ResetPasswordActivity" />
 
-        <activity
-            android:name=".activity.MainActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="me.iwf.photopicker.PhotoPagerActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/customTheme.PhotoPreview"/>
-
-        <activity
-            android:name="me.iwf.photopicker.PhotoPickerActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/customTheme.PhotoPicker"/>
-
-        <activity android:name=".activity.SendSocialMessageActivity"/>
-        <activity android:name=".activity.SocialMessageDetailActivity"/>
+        <activity android:name=".activity.MainListActivity"/>
+        <activity android:name="com.limynl.project.activity.PropagandaActivity"/>
 
     </application>
 

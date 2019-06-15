@@ -58,13 +58,6 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
             }
         });
         mLoginPresenter = new LoginPresenter(this, this);
-        UserDbHelper.setInstance(this);
-        Intent intent = null;
-        if(UserDbHelper.getInstance().getLoginState()){//当前用户已登录
-            intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        }
     }
 
     @Override
@@ -76,7 +69,7 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
         UserDbHelper.getInstance().saveUserLoginInfo(userInfo);
 
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, MainListActivity.class);
         startActivity(intent);
         this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
@@ -98,11 +91,15 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
     @OnClick({R.id.id_login_btn, R.id.id_login_forget_password})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.id_login_btn:{
-                mLoginPresenter.login(mLoginPhoneNumber.getText().toString().trim(), mLoginPassword.getText().toString().trim());
-            }break;
-            case R.id.id_login_forget_password:{
-                Intent intent = new Intent(LoginActivity.this,ResetPasswordActivity.class);
+            case R.id.id_login_btn: {
+//                mLoginPresenter.login(mLoginPhoneNumber.getText().toString().trim(), mLoginPassword.getText().toString().trim());
+                Intent intent = new Intent(this, MainListActivity.class);
+                startActivity(intent);
+                this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+            break;
+            case R.id.id_login_forget_password: {
+                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
                 startActivity(intent);
             }
             break;

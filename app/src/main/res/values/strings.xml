@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">她的问答</string>
+    <string name="app_name">驾校报名及宣传系统</string>
 
     <string name="str_reset_password">重置密码</string>
     <string name="str_register">注册</string>
