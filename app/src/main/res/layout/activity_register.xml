@@ -30,55 +30,7 @@
             android:textColorHint="@color/colorTextHint"
             android:hint="@string/str_register_input_username"/>
     </LinearLayout>
-    <!--分割线-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:background="@color/colorDivider"
-        android:layout_marginTop="10dp"
-        android:layout_height="0.5dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <be.webelite.ion.IconView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            ioniconview:name="ion_ios7_person_outline"
-            android:layout_marginTop="6dp"
-            android:textSize="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/colorTheme2"/>
-
-        <RadioGroup
-            android:id="@+id/user_sex"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginTop="3dp"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/sex_male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:checked="true"
-                android:text="男"/>
-
-            <RadioButton
-                android:id="@+id/sex_female"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="女"/>
-
-        </RadioGroup>
-
-    </LinearLayout>
     <!--分割线-->
     <TextView
         android:layout_width="match_parent"

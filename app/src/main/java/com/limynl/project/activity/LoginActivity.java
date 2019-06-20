@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import com.limynl.project.R;
 import com.limynl.project.base.TopBarBaseActivity;
-import com.limynl.project.db.UserDbHelper;
-import com.limynl.project.entity.UserInfo;
 import com.limynl.project.presenter.LoginPresenter;
 import com.limynl.project.view.ILoginView;
 
@@ -57,25 +55,11 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
                 startActivity(intent);
             }
         });
-        mLoginPresenter = new LoginPresenter(this, this);
-        UserDbHelper.setInstance(this);
-        Intent intent = null;
-        if(UserDbHelper.getInstance().getLoginState()){//当前用户已登录
-            intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        }
+        mLoginPresenter = new LoginPresenter(this ,this);
     }
 
     @Override
     public void loginSuccess(String msg) {
-        UserDbHelper.getInstance().saveLoginState(true);
-        UserInfo userInfo = new UserInfo();
-//        userInfo.setId("6c0f824f03594fac9f4a156b3baf99b6");
-        userInfo.setSex(1);
-        UserDbHelper.getInstance().saveUserLoginInfo(userInfo);
-
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
         this.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -99,7 +83,7 @@ public class LoginActivity extends TopBarBaseActivity implements ILoginView {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.id_login_btn:{
-                mLoginPresenter.login(mLoginPhoneNumber.getText().toString().trim(), mLoginPassword.getText().toString().trim());
+                mLoginPresenter.login(mLoginPhoneNumber.getText().toString(), mLoginPassword.getText().toString());
             }break;
             case R.id.id_login_forget_password:{
                 Intent intent = new Intent(LoginActivity.this,ResetPasswordActivity.class);

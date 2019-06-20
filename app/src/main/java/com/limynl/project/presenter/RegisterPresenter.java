@@ -33,7 +33,6 @@ public class RegisterPresenter implements IRegisterPresenter{
         } else {
             getCodeTv.setClickable(false);
             timer.start();
-
             iRegisterView.validateError(mContext.getString(R.string.str_verify_code_send_success));
         }
     }
@@ -47,7 +46,7 @@ public class RegisterPresenter implements IRegisterPresenter{
      */
     @Override
     public void register(String username, String phoneNum, String password, String code, CountDownTimer timer){
-        if (TextUtils.isEmpty(username)){
+       /* if (TextUtils.isEmpty(username)){
             iRegisterView.validateError(mContext.getString(R.string.str_username_cannot_empty));
             return;
         }
@@ -65,7 +64,7 @@ public class RegisterPresenter implements IRegisterPresenter{
             iRegisterView.validateError(mContext.getString(R.string.str_password_cannot_empty));
             return;
         }
-
+*/
         //进行注册
 //        checkCodeAndRegister(phoneNum, code, username, password, timer);
         iRegisterView.validateError("注册成功");
