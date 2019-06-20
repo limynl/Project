@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/id_user_info_img"
-                android:text="@string/str_about_info"
+                android:text="个人信息"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_size"/>
 

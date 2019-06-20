@@ -3,6 +3,7 @@ package com.limynl.project.fragment;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -10,12 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.limynl.project.R;
+import com.limynl.project.activity.UpdateActivity;
 import com.limynl.project.base.LazyLoadFragment;
 import com.limynl.project.db.UserDbHelper;
-import com.limynl.project.utils.Utils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -59,17 +59,15 @@ public class MeFragment extends LazyLoadFragment {
     protected void lazyLoad() {
         mContext = getActivity();
         UserDbHelper.setInstance(mContext);
-//        userName.setText(UserDbHelper.getInstance().getUserInfo().getPhone());
     }
 
     @OnClick({R.id.id_about_info, R.id.id_login_out})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.id_about_info: {//关于我们
-                boolean isWpa = Utils.wpaQQ(getActivity(), "1434117404");
-                if (!isWpa) {
-                    Toast.makeText(mContext, "未安装手Q或安装的版本不支持", Toast.LENGTH_SHORT).show();
-                }
+                Intent intent = new Intent(getActivity(), UpdateActivity.class);
+                startActivity(intent);
+                getActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
             break;
             case R.id.id_login_out: {//退出登录
